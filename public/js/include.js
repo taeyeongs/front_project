@@ -1,3 +1,19 @@
+
+document.addEventListener("DOMContentLoaded", () => {
+    const params = new URL(location).searchParams;
+    let m = params.get("m");
+    m = (m === null || m === '') ? 'main' : m ;
+
+    const main = document.querySelector("main")
+    main.dataset.includePath='./html/' + m + '.html'
+    
+    const cssStyle = document.getElementById('css-style')
+    console.log(cssStyle)
+    if(cssStyle) {
+        cssStyle.href = ('./css/' + m + '.css')
+    }
+});
+
 window.addEventListener('load', function() {
     var allElements = document.getElementsByTagName('*');
     Array.prototype.forEach.call(allElements, function(el) {
@@ -14,19 +30,3 @@ window.addEventListener('load', function() {
         }
     });
 });
-
-document.addEventListener("DOMContentLoaded", () => {
-    const params = new URL(location).searchParams;
-    let m = params.get("m");
-    m = (m === null || m === '') ? 'main' : m ;
-
-    const main = document.querySelector("main")
-    main.dataset.includePath='./html/include/' + m + '.html'
-    
-    const style = document.getElementsByClassName('css-style')
-    if(style) {
-        style.href = './css/' + m + '.html'
-    }
-});
-
-   
