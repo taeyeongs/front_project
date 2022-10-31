@@ -1,15 +1,15 @@
 # front_project
 
 ---
-* 변경불가 파일
-index.html
-js/include.js
+* 변경불가 파일(변경하면 안됨)  
+index.html  
+js/include.js  
 css/reset.css  
 ---
 1. 웹페이지 시작은 항상 index.html 파일로 실행한다
 2. 페이지 이동은 ?m=페이지명 으로 한다  
 예) http://127.0.0.1:5500/public/index.html?m=sub_main
-3. 게시판 페이징은 뒤어 다른 param을 사용
+3. 게시판 페이징은 뒤어 다른 param을 사용  
 예) http://127.0.0.1:5500/public/index.html?m=sub_main&p=1
 4. 각 페이지 작업시
 - header와 footer는 html/include 에 작성
