@@ -105,7 +105,6 @@ span {
 }
 .list_head {
     border-top: 1px solid black;
-    border-bottom: 1px solid black;
     display: flex;
     justify-content: center;
     justify-content: space-between;
@@ -116,12 +115,15 @@ span {
 .every {
     background-clip: padding-box;
     line-height: 35px;
-    border-bottom: 1px solid black;
+    /* border-collapse: collapse;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black; */
     display: flex;
     justify-content: center;
     justify-content: space-between;
     padding: 10px;
     flex-direction: row;
+    overflow: hidden;
 }
 .num, .num1 {
     margin-left: 20px;
@@ -181,6 +183,13 @@ span {
 .tit2 {
     display: none;
 }
-.tit2.active {
-    display: block;
+.wrap {
+    border-collapse: collapse;
 }
+.dropdown {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    border-collapse: collapse;
+}
+
+
