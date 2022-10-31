@@ -1,67 +1,96 @@
 @charset "UTF-8";
 /* @import url('./css/common.css'); */
 
-.main {
-        width:1050px;
-        /* height:500px; */
-        margin:0 auto;
-        background: gold;
-    }
-    .image {
-        background: yellowgreen;
-        width:1050px;
-        height:400px;
-    }
+main {
+    width:1050px;
+    /* height:500px; */
+    margin:0 auto;
+    background: gold;
+}
+.image {
+    background: yellowgreen;
+    width:1050px;
+    height:400px;
+}
+
+.sub_title {
+    text-align: center;
+    padding:20px;
+    font-size: 2rem;
+}
+.content {
+    background: blueviolet;
+    display: flex;
+    flex-direction: row;
+    width:1050px;
+}
+.sub_category {
+    background: yellow;
+    width:220px;
+}
+/* .content__products{
+    width: 100%;
+} */
+
+.products__list {
+    background: red;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    width:830px;
+}
+
+.product {
+    background: beige;
+    text-align:left;
+    width:31%;
+    overflow: hidden;
+    word-break: break-all;
+    margin:0 0 30px 0;
+}
+
+.product .product__img {
+    width:249px;
+    height:320px;
+}
+.product__img img {
+    width:100%;
+    height:100%;
+}
+
+.product .product__delivery_type {
+    color:gainsboro;
+}
+.product .product__price {
+    font-weight:bold;
+}
+
+.product__name {
+    line-height:200%;
+}
+.product__discript {
+    color:gainsboro;
+    font-size: 0.8rem;
+    line-height: 300%;
+}
+
+.content__products .page{
+    display: block;
+    text-align: center;
+    width:100%;
+}
+
+.content__products .page a{
+    display: inline-block;
     
-    .content {
-        background: blueviolet;
-        display: flex;
-        flex-direction: row;
-        width:1050px;
-    }
-    .sub_category {
-        background: yellow;
-        width:220px;
-    }
-    .content__products{
-        background: red;
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: stretch;
-        width:830px;
-    }
-    .product {
-        background: beige;
-        text-align:left;
-        width:33%;
-        overflow: hidden;
-        word-break: break-all;
-        padding:0 0 30px 0;
-    }
+    padding:10px 15px;
+    border:1px solid #ddd;
+    box-sizing: border-box;
+}
 
-    .product .product__img {
-        width:249px;
-        height:320px;
-    }
-    .product__img img {
-        width:100%;
-        height:100%;
-    }
-
-    .product .product__delivery_type {
-        color:gainsboro;
-    }
-    .product .product__price {
-        font-weight:bold;
-    }
-
-    .product__name {
-        line-height:200%;
-    }
-    .product__discript {
-        color:gainsboro;
-        font-size: 0.8rem;
-        line-height: 300%;
-    }
+.page a.on {
+    background: #000;
+    color:#fff;
+}

@@ -12,6 +12,17 @@ document.addEventListener("DOMContentLoaded", () => {
     if(cssStyle) {
         cssStyle.href = ('./css/' + m + '.css')
     }
+
+    // const jsFile = document.getElementById('js-file')
+    // console.log(jsFile)
+    // if(jsFile) {
+    //     jsFile.src = ('./js/' + m + '.js')
+    // }
+    
+    //새로운 script 추가시 아래형식으로 추가할것
+    const script_element = document.createElement('script');
+    script_element.setAttribute('src', ('./js/' + m + '.js'));
+    document.querySelector('main').appendChild(script_element)
 });
 
 window.addEventListener('load', function() {
