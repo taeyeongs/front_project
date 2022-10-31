@@ -111,6 +111,7 @@ span {
     justify-content: space-between;
     padding: 10px;
     line-height: 50px;
+    flex-direction: row;
 }
 .every {
     background-clip: padding-box;
@@ -120,6 +121,7 @@ span {
     justify-content: center;
     justify-content: space-between;
     padding: 10px;
+    flex-direction: row;
 }
 .num, .num1 {
     margin-left: 20px;
@@ -179,4 +181,6 @@ span {
 .tit2 {
     display: none;
 }
-
+.tit2.active {
+    display: block;
+}
