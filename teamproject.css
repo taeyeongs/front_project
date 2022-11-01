@@ -1,5 +1,8 @@
 @charset "utf-8";
-
+@font-face {
+    font-family: "Noto Sans", "malgun gothic", AppleGothic, dotum, sans-serif;
+    src: url(./font);
+}
 * {
     margin: 0;
     padding: 0;
@@ -22,6 +25,7 @@ a {
     display: inline-block;
     width: 150px;
     margin-bottom: 30px;
+    height: 
 }
 .Lside_bt_1:hover, .Lside_bt_2:hover,
 .Lside_bt_3:hover, .Lside_bt_4:hover {
@@ -39,10 +43,16 @@ a {
     width: 150px;
     display: inline-block;
 }
+
+.category_name{
+    float : left;
+}
+
 .Lside_bt_1_arrow, .Lside_bt_2_arrow,
 .Lside_bt_3_arrow, .Lside_bt_4_arrow {
-    display: inline-block;
+    /* display: inline-block; */
     cursor: pointer;
+    float:right;
     
 }
 .inquire {
@@ -99,11 +109,13 @@ h1 {
     border: 1px solid black;
     line-height: 50px;
     height: 50px
+    
 }
 span {
     letter-spacing: 0;
 }
 .list_head {
+    border-bottom: 1px solid black;
     border-top: 1px solid black;
     display: flex;
     justify-content: center;
@@ -115,9 +127,6 @@ span {
 .every {
     background-clip: padding-box;
     line-height: 35px;
-    /* border-collapse: collapse;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black; */
     display: flex;
     justify-content: center;
     justify-content: space-between;
@@ -187,9 +196,16 @@ span {
     border-collapse: collapse;
 }
 .dropdown {
-    border-top: 1px solid black;
     border-bottom: 1px solid black;
-    border-collapse: collapse;
+}
+.accordion-toggle {
+  display: block;
 }
 
+.accordion-content {
+  display: none;
+}
 
+.accordion-content.active {
+  display: block;
+}
