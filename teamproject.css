@@ -23,37 +23,38 @@ a {
 }
 .Lside_bt {
     display: inline-block;
-    width: 150px;
+    width: 170px;
     margin-bottom: 30px;
-    height: 
 }
 .Lside_bt_1:hover, .Lside_bt_2:hover,
 .Lside_bt_3:hover, .Lside_bt_4:hover {
     background-color: rgba(204, 204, 204, 0.514);
     color: purple;
 }
+.coll {
+    display:table;
+    border-collapse: collapse;
+    box-sizing: border-box;
+}
 .Lside_bt_1, .Lside_bt_2,
 .Lside_bt_3, .Lside_bt_4 {
     padding: 10px;
-    border: 1px solid black;
+    border: 1px solid rgba(0,0,0, 0.1);
     font-size: 15px;
-    border-collapse: collapse;
-    border-radius: 7px;
     padding-left: 15px;
-    width: 150px;
+    width: 172px;
     display: inline-block;
+    display:table-cell;
 }
-
 .category_name{
     float : left;
 }
 
 .Lside_bt_1_arrow, .Lside_bt_2_arrow,
 .Lside_bt_3_arrow, .Lside_bt_4_arrow {
-    /* display: inline-block; */
+    display: inline-block;
     cursor: pointer;
-    float:right;
-    
+    float: right;
 }
 .inquire {
     margin-top: 30px;
@@ -62,14 +63,16 @@ a {
     line-height: 15px;
 }
 .inquire a {
-    border: 1px solid black;
+    background-color: rgb(245, 241, 241);
+    border: none;
     border-radius: 5px;
     width: 150px;
     display: block;
     padding: 10px;
 }
-.inquire a p {
-    font-size: 15px ;
+.inquire a span {
+    font-weight: bolder;
+    font-size: 12px ;
 }
 .inquire_arrow {
     float: right;
@@ -106,17 +109,17 @@ h1 {
     margin-left: 30px;
 }
 .Rside_bt {
+    width: 28%;
     border: 1px solid black;
     line-height: 50px;
     height: 50px
-    
 }
 span {
     letter-spacing: 0;
 }
 .list_head {
     border-bottom: 1px solid black;
-    border-top: 1px solid black;
+    border-top: 3px solid black;
     display: flex;
     justify-content: center;
     justify-content: space-between;
@@ -171,6 +174,7 @@ span {
     justify-content: center;
     box-sizing: border-box;
     text-align: center;
+    align-items: center;
 }
 .left, .right {
     letter-spacing: 0;
@@ -179,11 +183,12 @@ span {
     font-size: 50px;
     border: 1px solid black;
     box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 10px;;
 }
-.left {
-    margin-left: 10px;
-}
-.right {
+.left, .right {
     margin-left: 10px;
 }
 .toggle {
@@ -196,7 +201,7 @@ span {
     border-collapse: collapse;
 }
 .dropdown {
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid rgba(0,0,0, 0.1);
 }
 .accordion-toggle {
   display: block;
