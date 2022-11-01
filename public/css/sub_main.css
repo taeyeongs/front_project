@@ -5,7 +5,6 @@ main {
     width:1050px;
     /* height:500px; */
     margin:0 auto;
-    background: gold;
 }
 .image {
     background: yellowgreen;
@@ -19,7 +18,6 @@ main {
     font-size: 2rem;
 }
 .content {
-    background: blueviolet;
     display: flex;
     flex-direction: row;
     width:1050px;
@@ -32,8 +30,36 @@ main {
     width: 100%;
 } */
 
+.recommend_sort_desc {
+    display:none;
+}
+
+
+
+.products__top .count {
+    float:left;
+    font-weight: bold;
+}
+
+.products__top ul.sorts{
+    float:right;
+    display:flex;
+    flex-direction: row;
+    font-size: 0.9rem;
+}
+
+ul.sorts .sort::after {
+    text-align: center;
+    line-height: 1.4rem;
+    content: "";
+    width:1px;
+    height:20px;
+    margin-right:20px;
+    background: 1px solid #000000;
+}
+
 .products__list {
-    background: red;
+    /* background: red; */
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -45,7 +71,7 @@ main {
 .product {
     background: beige;
     text-align:left;
-    width:31%;
+    width:249px;
     overflow: hidden;
     word-break: break-all;
     margin:0 0 30px 0;
@@ -54,14 +80,18 @@ main {
 .product .product__img {
     width:249px;
     height:320px;
+    text-align:center;margin-bottom:10px;
+
 }
 .product__img img {
     width:100%;
     height:100%;
+    text-align:center;
+    
 }
 
 .product .product__delivery_type {
-    color:gainsboro;
+    color:#aaa;
 }
 .product .product__price {
     font-weight:bold;
@@ -71,7 +101,7 @@ main {
     line-height:200%;
 }
 .product__discript {
-    color:gainsboro;
+    color:#aaa;
     font-size: 0.8rem;
     line-height: 300%;
 }
@@ -84,7 +114,6 @@ main {
 
 .content__products .page a{
     display: inline-block;
-    
     padding:10px 15px;
     border:1px solid #ddd;
     box-sizing: border-box;
