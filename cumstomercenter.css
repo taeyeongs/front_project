@@ -244,6 +244,8 @@ span {
 }
 .tit2 {
   display: none;
+  padding: 20px 40px;
+  line-height: 30px;
 }
 .wrap {
   border-collapse: collapse;
