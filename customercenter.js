@@ -1,3 +1,4 @@
+// 게시판  toggle 기능
 // Listen for click on the document
 document.addEventListener("click", function (event) {
   // console.log("event : " + event);
@@ -28,6 +29,8 @@ document.addEventListener("click", function (event) {
   // Toggle our content
   content.classList.toggle("active");
 });
+
+// 카테고리 버튼 toggle 기능
 
 const selectBoxElements = document.querySelectorAll(".select_box");
 
@@ -64,13 +67,23 @@ document.addEventListener("click", function (e) {
     return;
   }
 
-  const allSelectBoxElements = document.querySelectorAll(".select_box");
+  const allSelectBoxElements = document.querySelector(".select_box");
 
   allSelectBoxElements.forEach((boxElement) => {
     boxElement.classList.remove("active");
   });
 });
 
-$(".select_box").click(function () {
-  $("ul").toggle("slow");
-});
+// const sv = document.getElementsByClassName("selected-value").value;
+// const list = document.querySelectorAll(".dropdown");
+// console.log(list);
+
+// function filter() {
+//   for (let i = 0; i > list.length; i++) {
+//     if (sv === list.value) {
+//       list[i].style.display = "flex";
+//     } else {
+//       list[i].style.display = "none";
+//     }
+//   }
+// }

@@ -130,7 +130,7 @@ h1 {
   line-height: 50px;
   height: 50px;
   border-collapse: collapse;
-  background: url("./imgage/ico_down_16x10.png") no-repeat right 11px center;
+  background: url("./image/ico_down_16x10.png") no-repeat right 11px center;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -274,7 +274,7 @@ ul {
 }
 .select_box .Rside_bt .arrow {
   width: 24px;
-  background: url(../01.HTML-CSS-JS/imgage/ico_down_16x10.png) no-repeat 70% 50%;
+  background: url(../01.HTML-CSS-JS/image/ico_down_16x10.png) no-repeat 70% 50%;
   overflow: hidden;
 }
 .select_box ul {
