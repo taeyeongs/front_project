@@ -32,8 +32,6 @@ document.addEventListener("click", function (event) {
 
 // 카테고리 버튼 toggle 기능
 
-const selectBoxElements = document.querySelectorAll(".select_box");
-
 function toggleSelectBox(selectBox) {
   selectBox.classList.toggle("active");
 }
@@ -44,18 +42,20 @@ function selectOption(optionElement) {
   selectedElement.textContent = optionElement.textContent;
 }
 
-selectBoxElements.forEach((selectBoxElement) => {
-  selectBoxElement.addEventListener("click", function (e) {
-    const targetElement = e.target;
-    const isOptionElement = targetElement.classList.contains("option");
+const selectBoxElement = document.querySelector(".select_box");
 
-    if (isOptionElement) {
-      selectOption(targetElement);
-    }
+// selectBoxElements.forEach((selectBoxElement) => {
+selectBoxElement.addEventListener("click", function (e) {
+  const targetElement = e.target;
+  const isOptionElement = targetElement.classList.contains("option");
 
-    toggleSelectBox(selectBoxElement);
-  });
+  if (isOptionElement) {
+    selectOption(targetElement);
+  }
+
+  toggleSelectBox(selectBoxElement);
 });
+// });
 
 document.addEventListener("click", function (e) {
   const targetElement = e.target;
@@ -74,16 +74,22 @@ document.addEventListener("click", function (e) {
   });
 });
 
-// const sv = document.getElementsByClassName("selected-value").value;
-// const list = document.querySelectorAll(".dropdown");
-// console.log(list);
+let search = document.querySelectorAll(".option").values();
+console.log(search);
 
-// function filter() {
-//   for (let i = 0; i > list.length; i++) {
-//     if (sv === list.value) {
-//       list[i].style.display = "flex";
-//     } else {
-//       list[i].style.display = "none";
-//     }
-//   }
-// }
+function filter() {
+  let listInner = document.getElementsByClassName("listInner");
+
+  for (let i = 0; i < listInner.length; i++) {
+    city = listInner[i].getElementsByClassName("city");
+    country = listInner[i].getElementsByClassName("country");
+    if (
+      city[0].innerHTML.toLowerCase().indexOf(search) != -1 ||
+      country[0].innerHTML.toLowerCase().indexOf(search) != -1
+    ) {
+      listInner[i].style.display = "block";
+    } else {
+      listInner[i].style.display = "none";
+    }
+  }
+}
