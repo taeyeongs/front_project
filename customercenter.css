@@ -33,7 +33,7 @@ a {
   background-color: rgba(204, 204, 204, 0.514);
   color: purple;
 }
-.coll {
+.notice {
   display: table;
   border-collapse: collapse;
   box-sizing: border-box;
@@ -140,16 +140,6 @@ select {
 select::-ms-expand {
   display: none;
 }
-.icoArrow {
-  top: 0;
-  right: 0;
-  z-index: 1;
-  width: 35px;
-  height: inherit;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 option {
   padding: 10px;
   font-size: 15px;
@@ -158,7 +148,7 @@ span {
   letter-spacing: 0;
 }
 .list_head {
-  border-bottom: 1px solid black;
+  border-bottom: 0.5px solid black;
   border-top: 3px solid black;
   display: flex;
   justify-content: center;
@@ -228,15 +218,11 @@ span {
   width: 50px;
   line-height: 50px;
   font-size: 50px;
-  border: 1px solid black;
   box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: center;
   padding-bottom: 10px;
-}
-.left,
-.right {
   margin-left: 10px;
 }
 .toggle {

@@ -70,3 +70,7 @@ document.addEventListener("click", function (e) {
     boxElement.classList.remove("active");
   });
 });
+
+$(".select_box").click(function () {
+  $("ul").toggle("slow");
+});
