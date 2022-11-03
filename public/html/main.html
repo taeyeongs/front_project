@@ -5,7 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>메인페이지</title>
-    <link rel="stylesheet" href="../img/icon/fontawesome-free-6.2.0-web/" />
+    <link
+      rel="stylesheet"
+      href="../img/icon/fontawesome-free-6.2.0-web/css/all.min.css"
+    />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
@@ -13,23 +16,70 @@
     <link rel="stylesheet" href="../css/main.css" />
   </head>
   <body onload="InitializeStaticMenu()">
-    <div class="fix_menu">
+    <div class="fix_menu" style="z-index: 100; display: none">
       <div class="fix_menu2">
         <div class="fix_menu3">
-          <img
-            src="../img/icon/menu.png"
-            alt="menu"
-            onmouseover="dispShow('main_menu2');"
-          />
-          <div class="fix_menu_Kategorie">카테고리</div>
-        </div>
+          <div class="fix_Kategorie">
+            <img
+              src="../img/icon/menu.png"
+              alt="menu"
+              onmouseover="dispShow('Kategorie_menus');"
+            />
+            <div class="fix_menu_Kategorie">카테고리</div>
+          </div>
 
-        <ul class="fix_submenu">
-          <li>신상품</li>
-          <li>베스트</li>
-          <li>알뜰쇼핑</li>
-          <li>특가/혜택</li>
-        </ul>
+          <div
+            class="fix_Kategorie_submenu"
+            id="Kategorie_menus"
+            style="z-index: 10; display: none"
+            onmouseover="dispShow('Kategorie_menus');"
+            onmouseout="dispHidden('Kategorie_menus');"
+          >
+            <div
+              onmouseover="dispShow('Kategorie_submenus');"
+              onmouseout="dispHidden('Kategorie_submenus');"
+            >
+              <img src="../img/icon/giftbox.png" alt="오류" />
+              선물하기
+            </div>
+            <div onmouseover="dispHidden('Kategorie_submenus');">
+              <img src="../img/icon/fruit.png" alt="오류" />
+              과일·견과·쌀
+            </div>
+            <div onmouseover="dispHidden('Kategorie_submenus');">
+              <img src="../img/icon/bread.png" alt="오류" />
+              베이커리·치즈·델리
+            </div>
+            <div onmouseover="dispHidden('Kategorie_submenus');">
+              <img src="../img/icon/restaurant.png" alt="오류" />
+              주방용품
+            </div>
+            <div onmouseover="dispHidden('Kategorie_submenus');">
+              <img src="../img/icon/household.png" alt="오류" />
+              가전제품
+            </div>
+          </div>
+
+          <div
+            class="fix_Kategorie_submenu2"
+            id="Kategorie_submenus"
+            style="z-index: 10; display: none"
+            onmouseover="dispShow('Kategorie_menus'); dispShow('Kategorie_submenus');"
+            onmouseout="dispHidden('Kategorie_menus'); dispHidden('Kategorie_submenus');"
+          >
+            <div>홍삼·즙</div>
+            <div>건강식품</div>
+            <div>베이커리·커피·차</div>
+            <div>뷰티·향수·꽃</div>
+            <div>리빙·생활·유아동</div>
+          </div>
+        </div>
+        <div class="fix_submenu">
+          <span onclick="alert_mag()">신상품</span>
+          <span onclick="alert_mag()">베스트</span>
+          <span onclick="alert_mag()">알뜰쇼핑</span>
+          <span onclick="alert_mag()">특가/혜택</span>
+        </div>
 
         <div class="fix_menu_search">
           <input
@@ -47,7 +97,11 @@
             style="display: none; cursor: pointer"
             onclick="searchClear2();"
           />
-          <i class="fa-solid fa-magnifying-glass" onclick="alert_mag()"></i>
+          <i
+            class="fa-solid fa-magnifying-glass"
+            onclick="alert_mag()"
+            style="display: block"
+          ></i>
         </div>
       </div>
     </div>
@@ -57,10 +111,10 @@
         <div class="header_left">
           <a href="#" class="sign">회원가입</a>
           <div class="bar"></div>
-          <a href="javascript:alert_mag();" class="login">로그인</a>
+          <a href="javascript:void(0);" class="login">로그인</a>
           <div class="bar"></div>
           <div class="center" onmouseover="dispShow('Submenu');">
-            <a href="javascript:alert_mag();" class="client"
+            <a href="javascript:void(0);" class="client"
               >고객센터 <i class="fa-solid fa-caret-down"></i
             ></a>
             <div
@@ -110,20 +164,27 @@
       <div class="header_menu_wrap">
         <div class="header_menu">
           <div class="header_menu2">
-            <span onmouseover="dispShow('main_menu');" style="cursor: pointer"
-              ><img src="../img/icon/menu.png" alt="menu"
-            /></span>
-            <a href="javascript:alert_mag();" class="header_menu_Kategorie"
-              >카테고리</a
-            >
+            <div class="header_Kategorie">
+              <img
+                onmouseover="dispShow('main_menu');"
+                style="cursor: pointer"
+                src="../img/icon/menu.png"
+                alt="menu"
+              />
+              <span class="header_menu_Kategorie">카테고리</span>
+            </div>
+
             <div
               class="header_main_menu"
               id="main_menu"
-              style="display: none; z-index: 999"
+              style="display: none; z-index: 10"
               onmouseover="dispShow('main_menu');"
               onmouseout="dispHidden('main_menu');"
             >
-              <div onmouseover="dispShow('sub_menu');">
+              <div
+                onmouseover="dispShow('sub_menu');"
+                onmouseout="dispHidden('sub_menu');"
+              >
                 <img src="../img/icon/giftbox.png" alt="오류" /> 선물하기
               </div>
               <div onmouseover="dispHidden('sub_menu');" onclick="alert_mag()">
@@ -143,7 +204,7 @@
             <div
               class="header_sub_menu"
               id="sub_menu"
-              style="display: none; z-index: 999"
+              style="display: none; z-index: 10"
               onmouseover="dispShow('main_menu'); dispShow('sub_menu');"
               onmouseout="dispHidden('main_menu'); dispHidden('sub_menu');"
             >
@@ -155,18 +216,10 @@
             </div>
           </div>
           <div class="header_menu3">
-            <a href="javascript:alert_mag();" class="header_menu_list"
-              >신상품</a
-            >
-            <a href="javascript:alert_mag();" class="header_menu_list"
-              >베스트</a
-            >
-            <a href="javascript:alert_mag();" class="header_menu_list"
-              >알뜰쇼핑</a
-            >
-            <a href="javascript:alert_mag();" class="header_menu_list"
-              >특가/혜택</a
-            >
+            <a href="javascript:void(0);" class="header_menu_list">신상품</a>
+            <a href="javascript:void(0);" class="header_menu_list">베스트</a>
+            <a href="javascript:void(0);" class="header_menu_list">알뜰쇼핑</a>
+            <a href="javascript:void(0);" class="header_menu_list">특가/혜택</a>
           </div>
         </div>
       </div>
@@ -330,7 +383,7 @@
         </div>
       </div>
     </div>
-    <div class="move_small" id="STATICMENU">
+    <div class="move_small" id="STATICMENU" style="z-index: 10">
       <img src="../img/product/small.png" alt="작은이미지" />
       <table>
         <tr>
@@ -345,6 +398,165 @@
       <button type="button">
         <img src="../img/icon/upload (1).png" alt="UP" />
       </button>
+    </div>
+    <div>
+      <div id="footer">
+        <div class="footer_content">
+          <div class="footer_happiness_contact">
+            <h2>market고객행복센터<span>365일 오전7시 - 오후11시</span></h2>
+            <strong class="happiness_contact_stro">2580-2580</strong>
+            <div class="happiness_contact_btn">
+              <button class="contact_btn1">카카오톡 문의</button>
+              <button class="contact_btn">1:1 문의</button>
+              <button class="contact_btn">대량주문 문의</button>
+            </div>
+            <div class="happiness_contact_email">
+              비회원 문의: <a href="#"> sirulong@gmail.com</a><br />비회원
+              대량주문 문의: <a href="#"> sirulong1@gmail.com</a>
+            </div>
+          </div>
+          <div class="footer_introduce_content">
+            <ul class="footer_introduce_content_mana">
+              <li>
+                <a
+                  href="javascript:void(0);"
+                  class="introduce_content_matt"
+                  onclick="alert_mag();"
+                  >마켓소개</a
+                >
+              </li>
+              <li>
+                <a
+                  href="javascript:void(0);"
+                  class="introduce_content_matt"
+                  onclick="alert_mag();"
+                  >마켓소개영상</a
+                >
+              </li>
+              <li>
+                <a
+                  href="javascript:void(0);"
+                  class="introduce_content_matt"
+                  onclick="alert_mag();"
+                  >인재채용</a
+                >
+              </li>
+              <li>
+                <a
+                  href="javascript:void(0);"
+                  class="introduce_content_matt"
+                  onclick="alert_mag();"
+                  >이용약관</a
+                >
+              </li>
+              <li>
+                <a
+                  href="javascript:void(0);"
+                  class="introduce_content_matt"
+                  onclick="alert_mag();"
+                  >개인정보처리방침</a
+                >
+              </li>
+              <li>
+                <a
+                  href="javascript:void(0);"
+                  class="introduce_content_matt"
+                  onclick="alert_mag();"
+                  >이용안내</a
+                >
+              </li>
+            </ul>
+            <div class="footer_enterprise">
+              법인명(상호): 5조 | 사업자등록증번호: 123-12-12345"<a href="#"
+                >사업자정보 확인</a
+              >
+              <br />주소: 서울특별시 강남구 바로 여기 | 대표이사: 오조
+            </div>
+            <ul class="icon_queue">
+              <li>
+                <a
+                  href="javascript:void(0);"
+                  class="icon_pto"
+                  onclick="alert_mag();"
+                  ><img src="../img/product/icon_instagram.png" alt=""
+                /></a>
+              </li>
+              <li>
+                <a
+                  href="javascript:void(0);"
+                  class="icon_pto"
+                  onclick="alert_mag();"
+                  ><img src="../img/product/icon_facebook.png" alt=""
+                /></a>
+              </li>
+              <li>
+                <a
+                  href="javascript:void(0);"
+                  class="icon_pto"
+                  onclick="alert_mag();"
+                  ><img src="../img/product/icon_naver_blog.png" alt=""
+                /></a>
+              </li>
+              <li>
+                <a
+                  href="javascript:void(0);"
+                  class="icon_pto"
+                  onclick="alert_mag();"
+                  ><img src="../img/product/icon_naver_post.png" alt=""
+                /></a>
+              </li>
+              <li>
+                <a
+                  href="javascript:void(0);"
+                  class="icon_pto"
+                  onclick="alert_mag();"
+                  ><img src="../img/product/icon_youtube.png" alt=""
+                /></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer_approve">
+          <button class="footer_approve_btn">
+            <img src="../img/product/icon_identification.png" alt="" />
+            <p class="footer_approve_lett">
+              [인증범위] 마켓컬리 쇼핑몰 서비스 개발·운영<br />(심사받지 않은
+              물리적 인프라 제외) <br />[유효기간] 2022.01.19 ~ 2025.01.18
+            </p>
+          </button>
+          <button class="footer_approve_btn">
+            <img src="../img/product/icon_personnal_information.png" alt="" />
+            <p class="footer_approve_lett">
+              개인정보보호 우수 웹사이트 <br />개인정보처리시스템 인증 (ePRIVACY
+              PLUS)
+            </p>
+          </button>
+          <button class="footer_approve_btn">
+            <img src="../img/product/icon_payment.png" alt="" />
+            <p class="footer_approve_lett">
+              토스페이먼츠 구매안전(에스크로) <br />서비스를 이용하실 수
+              있습니다.
+            </p>
+          </button>
+          <button class="footer_approve_btn">
+            <img src="../img/product/icon_woori.png" alt="" />
+            <p class="footer_approve_lett">
+              고객님이 현금으로 결제한 금액에 대해 우리은행과 <br />채무지급보증
+              계약을 체결하여 안전거래를 보장하고 <br />있습니다.
+            </p>
+          </button>
+        </div>
+      </div>
+
+      <div class="footer_rear">
+        <p>
+          마켓에서 판매되는 상품 중에는 마켓에 입점한 개별 판매자가 판매하는
+          마켓플레이스(오픈마켓) 상품이 포함되어 있습니다.
+          <br />마켓플레이스(오픈마켓) 상품의 경우 컬리는 통신판매중개자로서
+          통신판매의 당사자가 아닙니다. 컬리는 해당 상품의 주문, 품질, 교환/환불
+          등 의무와 책임을 부담하지 않습니다.
+        </p>
+      </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script src="../js/main.js"></script>
