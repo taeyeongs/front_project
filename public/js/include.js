@@ -48,10 +48,10 @@ window.addEventListener('load', function() {
     }
 });
 
-function load(files) {
-    for(i=0; i < files.length; i++) {
-        let src = document.createElement('script');
-        src.setAttribute('src', files[i]);
-        document.getElementsByTagName('footer')[0].appenndChild(src);
-    }
-}
+// function load(files) {
+//     for(i=0; i < files.length; i++) {
+//         let src = document.createElement('script');
+//         src.setAttribute('src', files[i]);
+//         document.getElementsByTagName('footer')[0].appenndChild(src);
+//     }
+// }
