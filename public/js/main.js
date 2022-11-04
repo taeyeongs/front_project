@@ -47,6 +47,27 @@ function dispToggle(objId) {
     obj.style.display = "none";
   }
 }
+
+// fix 상단바 보이고 사라지기
+function navigo() {
+  const header = document.querySelector(".header_wrap"); //헤더부분획득
+  const headerheight = header.clientHeight; //헤더높이
+  document.addEventListener("scroll", onScroll, { passive: true }); //스크롤 이벤트
+  function onScroll() {
+    const scrollposition = pageYOffset; //스크롤 위치
+    const nav = document.querySelector(".fix_menu"); //네비게이션
+    if (headerheight <= scrollposition) {
+      //만약 헤더높이<=스크롤위치라면
+      nav.style.display = "block"; //fix 메뉴 보이기
+    } else {
+      //그 외의 경우
+      nav.style.display = "none"; //fix 메뉴 가리기
+    }
+  }
+}
+navigo();
+
+// 고정 header 하위메뉴 보이고 사라지기
 function dispShow(objId) {
   var obj = document.getElementById(objId);
 
@@ -109,7 +130,6 @@ function searchClear2() {
 
 // 상단페이지이동
 function movetop() {
-  console.log(1);
   window.scrollTo(0, 0);
 }
 
