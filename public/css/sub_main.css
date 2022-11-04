@@ -35,6 +35,10 @@ main {
 }
 
 
+.products__top  {
+    width:100%;
+    height:30px;
+}
 
 .products__top .count {
     float:left;
@@ -122,4 +126,63 @@ ul.sorts .sort::after {
 .page a.on {
     background: #000;
     color:#fff;
+}
+
+.fileter_wrap_area {
+    position: sticky;
+    top: 60px;
+    width:200px;
+    max-height: calc(100vh - 120px);
+    overflow: hidden scroll;
+    border-bottom: 1px solid #ddd;
+    margin-right:20px;
+}
+
+.fileter_wrap_area li {
+    line-height:2rem;
+    font-size:0.9rem;
+    
+}
+
+.filter_more {
+    font-size:0.8rem;
+    text-align:center;
+    color:#aaa;
+    padding:15px 0 15px 0;
+}
+
+.filter_list {
+    border-bottom:1px solid #ddd
+}
+
+.filter_list .filter_title  {
+    padding:20px 0 10px 0;
+
+}
+.filter_list li span {
+    display: inline-block;
+    text-indent: 10px;;
+}
+
+.product_search {
+    /* flex-wrap: wrap; */
+    display: none;
+    padding: 5px;
+    border:1px solid #ddd;
+    width:100%;
+    margin-bottom:20px;
+}
+.product_search_area  {
+    display:flex;
+    flex-flow:wrap;
+}
+
+.product_search_area div{
+    
+    color:blueviolet;
+    margin:10px 10px 10px 10px;
+    /* box-sizing: border-box; */
+}
+.product_search_area  div .filter_text_del{
+    color:#aaa;
 }

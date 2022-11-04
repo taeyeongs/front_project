@@ -1,8 +1,5 @@
-const bt = document.querySelector('.button_2');
-// const bt_1 = document.querySelector('.button_2_1');
+const bt = document.querySelectorAll('.button_2');
 const bt_1 = document.querySelectorAll('.button_2_1');
-
-// const ct = document.querySelector('.count');
 const ct = document.querySelectorAll('.count');
 const count_bt = document.querySelectorAll('.text_5')
 const btn1 = document.querySelector('.button_fixed3');
@@ -14,25 +11,11 @@ let price = 2480;
 bt_1.forEach(function(value, index){
     value.addEventListener('click', () => {
         count += 1
-        
         ct.forEach(function(value, index){
             value.textContent = `${count}`
 
             count_bt[index].textContent = `${count*price}원`
         })
-
-        // count_bt.forEach(function(value, index){
-        //     value.textContent = `${count*price}원`
-        // })
-    })
-})
-
-
-// bt_1.addEventListener('click', () => {
-//     ct.textContent = `${count += 1}`
-//     count_bt.textContent = `${count*price}원`
-//     })
-    
 
 
 bt.addEventListener('click', () => {
@@ -45,6 +28,26 @@ bt.addEventListener('click', () => {
 })
 
 
+
+    })
+})
+
+   bt.forEach(function(value, index){
+      value.addEventListener('click', () => {
+        if(count>=2)
+          count -= 1
+          
+          ct.forEach(function(value, index){
+              value.textContent = `${count}`
+
+              count_bt[index].textContent = `${count*price}원`
+          })
+
+          // count_bt.forEach(function(value, index){
+          //     value.textContent = `${count*price}원`
+          // })
+      })
+   })
 btn1.addEventListener('click', ()=>{
    // 토글 할 버튼 선택 (btn1)
     // btn1 숨기기 (display: none)
@@ -59,6 +62,7 @@ btn1.addEventListener('click', ()=>{
 })
 
  showpping.addEventListener('click', () => {
-    prompt("로그인이 필요합니다")
+    alert("로그인이 필요합니다")
+
     })
 

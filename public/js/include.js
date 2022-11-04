@@ -22,7 +22,9 @@ document.addEventListener("DOMContentLoaded", () => {
     //새로운 script 추가시 아래형식으로 추가할것
     const script_element = document.createElement('script');
     script_element.setAttribute('src', ('./js/' + m + '.js'));
-    document.querySelector('main').appendChild(script_element)
+    document.querySelector('footer').appendChild(script_element);
+
+
 });
 
 window.addEventListener('load', function() {
@@ -40,4 +42,16 @@ window.addEventListener('load', function() {
             xhttp.send();
         }
     });
+
+    if(jsfiles !== undefined) {
+        load(jsfiles);
+    }
 });
+
+// function load(files) {
+//     for(i=0; i < files.length; i++) {
+//         let src = document.createElement('script');
+//         src.setAttribute('src', files[i]);
+//         document.getElementsByTagName('footer')[0].appenndChild(src);
+//     }
+// }
