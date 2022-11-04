@@ -34,7 +34,16 @@ var swiper2 = new Swiper(".mySwiper2", {
 var swiper3 = new Swiper(".mySwiper3", {
   slidesPerView: 3,
   spaceBetween: 30,
+  slidesPerGroup: 3,
   centeredSlides: true,
+  pagination: {
+    el: ".swiper-pagination",
+    type: "fraction",
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
 });
 
 // 하위메뉴

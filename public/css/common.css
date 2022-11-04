@@ -1,35 +1,28 @@
 @charset "UTF-8";
-@import url('./reset.css');
+@import url("./reset.css");
 /* 초기화 */
 
 * {
-    margin: 0; padding: 0;
-    font-family: Arial, 'san-serif';
-}
-a { text-decoration: none !important; }
-img { border: 0; }
-ul { list-style: none; }
-
-
-header, footer {
-    width:1050px;
-    margin:0 auto
+  margin: 0;
+  padding: 0;
+  font-family: Arial, "san-serif";
 }
 
-header .top_banner {
-    width:100%
-}
-header .top_mem {
-    display: flex;
-    flex-direction: row;
+.wrap {
+  width: 1050px;
+  margin: 0 auto;
 }
 
-header .log_search {
-    display: flex;
-    flex-direction: row;
+.slide_1set {
+  width: 100%;
 }
 
-header .category {
-    display: flex;
-    flex-direction: row;
+a {
+  text-decoration: none !important;
+}
+img {
+  border: 0;
+}
+ul {
+  list-style: none;
 }
