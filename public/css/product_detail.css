@@ -5,6 +5,7 @@
   padding-top: 30px;
 }
 
+
 .wrap {
   overflow: hidden;
   position: relative;
@@ -146,6 +147,8 @@
 
 .button_1 {
   width: 120px;
+  height: 40px;
+  line-height: 40px;;
   display: inline-block;
   border: 1px solid gainsboro;
   text-align: center;

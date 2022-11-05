@@ -1,3 +1,5 @@
+import { includeHTML } from "./include";
+includeHTML();
 const bt = document.querySelectorAll(".button_2");
 const bt_1 = document.querySelectorAll(".button_2_1");
 const ct = document.querySelectorAll(".count");
