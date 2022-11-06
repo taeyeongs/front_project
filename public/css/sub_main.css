@@ -21,9 +21,10 @@ main {
   display: flex;
   flex-direction: row;
   width: 1050px;
+  margin-bottom:50px;
 }
 .sub_category {
-  background: yellow;
+  /* background: yellow; */
   width: 220px;
 }
 /* .content__products{
@@ -72,7 +73,7 @@ ul.sorts .sort::after {
 }
 
 .product {
-  background: beige;
+  /* background: beige; */
   text-align: left;
   width: 249px;
   overflow: hidden;
@@ -96,7 +97,7 @@ ul.sorts .sort::after {
   color: #aaa;
 }
 .product .product__price {
-  font-weight: bold;
+  font-weight: 800;
 }
 
 .product__name {

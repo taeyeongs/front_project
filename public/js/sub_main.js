@@ -1,3 +1,7 @@
+import { includeHTML } from "./include.js";
+includeHTML();
+
+
 // var quick_menu = $('#quick');
 // var quick_top = 470;
 

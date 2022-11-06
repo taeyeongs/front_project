@@ -1,22 +1,29 @@
 @charset "utf-8";
-@font-face {
-  font-family: "Noto Sans", "malgun gothic", AppleGothic, dotum, sans-serif;
-  src: url(./font/applegothic.ttf);
-}
-* {
-  margin: 0;
-  padding: 0;
-}
-.total {
+
+.wrap {
   width: 1050px;
-  margin-top: 25vw;
-  margin-left: 25vw;
-  overflow: hidden;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  margin:20px auto;
 }
-a {
-  text-decoration: none;
-  color: black;
+
+.top {
+  /* width:100%; */
+  display: flex;
+  margin-bottom:10px;
+  /* height: 40px; */
+  /* justify-content: right; */
+  /* padding-bottom: 30px; */
+  /* width: calc(100% - 20%); */
+  /* box-sizing: border-box; */
+}
+
+.contents {
+  margin-left:20px;
+  width:100%;
+  clear:both;
+  /* width:90%; */
 }
 .Lside_header {
   margin-bottom: 50px;
@@ -84,15 +91,7 @@ a {
   float: right;
   line-height: 0;
 }
-.top {
-  display: flex;
-  flex-direction: row;
-  height: 40px;
-  justify-content: right;
-  padding-bottom: 30px;
-  width: calc(100% - 20%);
-  box-sizing: border-box;
-}
+
 /* .Rside_bt {
   display: block;
 } */
@@ -126,7 +125,7 @@ h1 {
   height: 100%;
 }
 .select_box {
-  width: 28%;
+  width: 200px;
   line-height: 50px;
   height: 50px;
   border-collapse: collapse;
@@ -134,7 +133,59 @@ h1 {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  display: inline-block;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
 }
+.select_box .Rside_bt {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 5px;
+}
+.select_box .Rside_bt .selected-value {
+  max-width: 90px;
+  
+}
+.select_box .Rside_bt .arrow {
+  width: 24px;
+  background: url(../img/icon/ico_down_16x10.png) no-repeat 70% 50%;
+  overflow: hidden;
+}
+.select_box ul {
+  width: 120px;
+  position: absolute;
+  background: #fff;
+  border-top: none;
+  margin: 1px 0 0 -1px;
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.select_box ul li {
+  padding: 8px 5px;
+}
+
+.select_box ul li:hover {
+  background: rgba(204, 204, 204, 0.514);
+}
+.select_box ul li,
+.select_box .Rside_bt .selected-value {
+  white-space: nowrap;
+  /*줄바꿈 안함*/
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /*말줄임 적용*/
+}
+.select_box ul {
+  display: none;
+  width: 183px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding-left: 10px;
+}
+
+.select_box.active ul {
+  display: initial;
+}
+
 select {
 }
 select::-ms-expand {
@@ -198,11 +249,12 @@ span {
 .question {
   font-size: 12px;
 }
-.wrap {
-  float: right;
-  width: calc(100% - 20%);
-  overflow: hidden;
+.total {
+  /* float: right; */
+  /* width: calc(100% - 20%); */
+  /* overflow: hidden; */
   margin-bottom: 30px;
+  border-collapse: collapse;
 }
 .page_bt {
   margin-top: 25px;
@@ -233,9 +285,7 @@ span {
   padding: 20px 40px;
   line-height: 30px;
 }
-.wrap {
-  border-collapse: collapse;
-}
+
 .dropdown {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
@@ -257,60 +307,6 @@ ul {
   overflow: hidden;
 }
 
-.select_box {
-  display: inline-block;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-  height: 50px;
-  line-height: 35px;
-}
-.select_box .Rside_bt {
-  display: flex;
-  justify-content: space-between;
-  padding: 8px 5px;
-}
-.select_box .Rside_bt .selected-value {
-  max-width: 90px;
-}
-.select_box .Rside_bt .arrow {
-  width: 24px;
-  background: url(../01.HTML-CSS-JS/image/ico_down_16x10.png) no-repeat 70% 50%;
-  overflow: hidden;
-}
-.select_box ul {
-  width: 120px;
-  position: absolute;
-  background: #fff;
-  border-top: none;
-  margin: 1px 0 0 -1px;
-  cursor: pointer;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-}
-.select_box ul li {
-  padding: 8px 5px;
-}
-
-.select_box ul li:hover {
-  background: rgba(204, 204, 204, 0.514);
-}
-.select_box ul li,
-.select_box .Rside_bt .selected-value {
-  white-space: nowrap;
-  /*줄바꿈 안함*/
-  overflow: hidden;
-  text-overflow: ellipsis;
-  /*말줄임 적용*/
-}
-.select_box ul {
-  display: none;
-  width: 183px;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-  padding-left: 10px;
-}
-
-.select_box.active ul {
-  display: initial;
-}
 .selected-value {
   padding-left: 10px;
 }

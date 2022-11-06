@@ -1,3 +1,7 @@
+// import { includeHTML } from "./include.js";
+// includeHTML();
+
+
 const userid = document.querySelector("#userid");
 const pwd1 = document.querySelector("#pwd1");
 const pwd2 = document.querySelector("#pwd2");

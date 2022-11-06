@@ -1,6 +1,6 @@
 export function includeHTML(){
     const includeArea = document.querySelectorAll('[data-include]');
- 
+ console.log('includeHTML')
     for(let dom of includeArea){
         const url = dom.dataset.include;
         fetch(url)

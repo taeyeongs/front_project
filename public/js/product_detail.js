@@ -1,9 +1,10 @@
-import { includeHTML } from "./include";
+import { includeHTML } from "./include.js";
 includeHTML();
-const bt = document.querySelectorAll(".button_2");
-const bt_1 = document.querySelectorAll(".button_2_1");
+
+const bt = document.querySelectorAll(".minus_button");
+const bt_1 = document.querySelectorAll(".plus_button");
 const ct = document.querySelectorAll(".count");
-const count_bt = document.querySelectorAll(".text_5");
+const count_bt = document.querySelectorAll(".total_price");
 const btn1 = document.querySelector(".button_fixed3");
 const btf2 = document.querySelector(".button_fixed2");
 const showpping = document.querySelector(".button_6");
