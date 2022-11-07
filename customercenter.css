@@ -2,6 +2,7 @@
 @font-face {
   font-family: "Noto Sans", "malgun gothic", AppleGothic, dotum, sans-serif;
   src: url(./font/applegothic.ttf);
+  src: url(./font/dotum.ttc);
 }
 * {
   margin: 0;
@@ -114,7 +115,7 @@ h1 {
   font-size: 25px;
 }
 .top_text2 {
-  font-weight: 2000;
+  font-weight: bolder;
   line-height: 50px;
   margin-left: 10px;
   padding-left: 11px;
@@ -131,14 +132,7 @@ h1 {
   height: 50px;
   border-collapse: collapse;
   background: url("./image/ico_down_16x10.png") no-repeat right 11px center;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
-}
-select {
-}
-select::-ms-expand {
-  display: none;
 }
 option {
   padding: 10px;
