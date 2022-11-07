@@ -194,9 +194,6 @@ h1 {
   display: initial;
 }
 
-select::-ms-expand {
-  display: none;
-}
 option {
   padding: 10px;
   font-size: 15px;
