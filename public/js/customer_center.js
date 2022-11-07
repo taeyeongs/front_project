@@ -67,15 +67,15 @@ document.addEventListener("click", function (e) {
     return;
   }
 
-  const allSelectBoxElements = document.querySelector(".select_box");
+  // const allSelectBoxElements = document.querySelector(".select_box");
 
-  allSelectBoxElements.forEach((boxElement) => {
-    boxElement.classList.remove("active");
-  });
+  // allSelectBoxElements.forEach((boxElement) => {
+  //   boxElement.classList.remove("active");
+  // });
 });
 
 let search = document.querySelectorAll(".option").values();
-console.log(search);
+// console.log(search);
 
 function filter() {
   let listInner = document.getElementsByClassName("listInner");

@@ -1,5 +1,5 @@
-import { includeHTML } from "./include.js";
-includeHTML();
+// import { includeHTML } from "./include.js";
+// includeHTML();
 
 const bt = document.querySelectorAll(".minus_button");
 const bt_1 = document.querySelectorAll(".plus_button");
@@ -7,7 +7,7 @@ const ct = document.querySelectorAll(".count");
 const count_bt = document.querySelectorAll(".total_price");
 const btn1 = document.querySelector(".button_fixed3");
 const btf2 = document.querySelector(".button_fixed2");
-const showpping = document.querySelector(".button_6");
+const showpping = document.querySelector(".basket_button");
 let count = 1;
 let price = 2480;
 
@@ -18,16 +18,6 @@ bt_1.forEach(function (value, index) {
       value.textContent = `${count}`;
       let totalPrice = count * price;
       count_bt[index].textContent = `${totalPrice.toLocaleString()}원`;
-    });
-
-    bt.addEventListener("click", () => {
-      if (count <= 1) {
-        count = 1;
-      } else {
-        ct.textContent = `${(count -= 1)}`;
-        let totalPrice = count * price;
-        count_bt.textContent = `${totalPrice.toLocaleString()}원`;
-      }
     });
   });
 });
@@ -41,10 +31,6 @@ bt.forEach(function (value, index) {
       let totalPrice = count * price;
       count_bt[index].textContent = `${totalPrice.toLocaleString()}원`;
     });
-
-    // count_bt.forEach(function(value, index){
-    //     value.textContent = `${count*price}원`
-    // })
   });
 });
 btn1.addEventListener("click", () => {
@@ -67,7 +53,6 @@ showpping.addEventListener("click", () => {
 function basketgo() {
   const productBase = document.querySelector(".num1"); //헤더부분획득
   const productBaseHeight = productBase.clientHeight; //헤더높이
-  console.log(productBaseHeight);
   document.addEventListener("scroll", onScroll, { passive: true }); //스크롤 이벤트
   function onScroll() {
     const scrollposition = pageYOffset; //스크롤 위치

@@ -307,11 +307,11 @@ ul {
   align-items: center;
 }
 
-.fix_submenu span {
+.fix_submenu a {
   padding: 0 30px;
 }
 
-.fix_submenu span:hover {
+.fix_submenu a:hover {
   color: purple;
   text-decoration: underline;
   cursor: pointer;
@@ -405,9 +405,9 @@ ul {
 .fix_category_submenu2 {
   position: absolute;
   left: 200px;
-  top: 30px;
+  top: 23px;
   width: 150px;
-  height: 230px;
+  height: 220px;
   padding: 5px 10px;
   border: 1px solid purple;
   background-color: rgb(255, 255, 255);

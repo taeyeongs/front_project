@@ -10,7 +10,7 @@
   </head>
 
   <body>
-    <header data-include="./html/include/header.html">
+    <header>
       <div class="fix_menu" style="z-index: 100; display: none">
         <div class="fix_menu2">
           <div class="fix_menu3">
@@ -68,10 +68,10 @@
             </div>
           </div>
           <div class="fix_submenu">
-            <span onclick="alert_mag()">신상품</span>
-            <span onclick="alert_mag()">베스트</span>
-            <span onclick="alert_mag()">알뜰쇼핑</span>
-            <span onclick="alert_mag()">특가/혜택</span>
+            <a href="./sub_main.html">신상품</a>
+            <a onclick="alert_mag()">베스트</a>
+            <a onclick="alert_mag()">알뜰쇼핑</a>
+            <a onclick="alert_mag()">특가/혜택</a>
           </div>
     
           <div class="fix_menu_search">
@@ -102,7 +102,7 @@
       <div class="header_wrap">
         <div class="header">
           <div class="header_left">
-            <a href="#" class="sign">회원가입</a>
+            <a href="./sign_up.html" class="sign">회원가입</a>
             <div class="bar"></div>
             <a href="javascript:void(0);" class="login">로그인</a>
             <div class="bar"></div>
@@ -118,7 +118,7 @@
                 onmouseout="dispHidden('Submenu');"
               >
                 <div class="center_list" onclick="alert_mag()">공지사항</div>
-                <div class="center_list">자주하는 질문</div>
+                <div class="center_list"><a href="./customer_center.html">자주하는 질문</a></div>
                 <div class="center_list" onclick="alert_mag()">1:1 문의</div>
                 <div class="center_list" onclick="alert_mag()">대량주문 문의</div>
               </div>
@@ -126,7 +126,7 @@
           </div>
           <div class="header_nav">
             <div class="header_logo">
-              <a href="./main.html">
+              <a href="./">
                 <img src="./img/icon/logo.png" alt="MARKET" />
               </a>
             </div>
@@ -212,10 +212,10 @@
               </div>
             </div>
             <div class="header_menu3">
-              <a href="javascript:void(0);" class="header_menu_list">신상품</a>
-              <a href="javascript:void(0);" class="header_menu_list">베스트</a>
-              <a href="javascript:void(0);" class="header_menu_list">알뜰쇼핑</a>
-              <a href="javascript:void(0);" class="header_menu_list">특가/혜택</a>
+              <a href="./sub_main.html" class="header_menu_list">신상품</a>
+              <a href="javascript:void(0);" onclick="alert_mag()" class="header_menu_list">베스트</a>
+              <a href="javascript:void(0);" onclick="alert_mag()" class="header_menu_list">알뜰쇼핑</a>
+              <a href="javascript:void(0);" onclick="alert_mag()" class="header_menu_list">특가/혜택</a>
             </div>
           </div>
         </div>
@@ -800,7 +800,7 @@
         </div>
       </div>
     </footer>
-    <script src="./js/product_detail.js" type="module"></script>
+    <script src="./js/product_detail.js"></script>
     <script src="./js/common.js"></script>
   </body>
 </html>

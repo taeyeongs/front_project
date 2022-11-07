@@ -65,7 +65,7 @@
 .Lside_bt_2_arrow,
 .Lside_bt_3_arrow,
 .Lside_bt_4_arrow {
-  display: inline-block;
+  display: block;
   cursor: pointer;
   float: right;
 }
@@ -120,16 +120,18 @@ h1 {
   color: #999;
   letter-spacing: -1px;
 }
+
 .Rside_bt {
   width: 100%;
   height: 100%;
 }
+
 .select_box {
   width: 200px;
   line-height: 50px;
   height: 50px;
   border-collapse: collapse;
-  background: url("./image/ico_down_16x10.png") no-repeat right 11px center;
+  background: url("../img/icon/ico_down_16x10.png") no-repeat right 11px center;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -137,18 +139,20 @@ h1 {
   border: 1px solid rgba(0, 0, 0, 0.1);
   cursor: pointer;
 }
+
 .select_box .Rside_bt {
   display: flex;
   justify-content: space-between;
   padding: 8px 5px;
 }
+
 .select_box .Rside_bt .selected-value {
   max-width: 90px;
-  
 }
+
 .select_box .Rside_bt .arrow {
   width: 24px;
-  background: url(../img/icon/ico_down_16x10.png) no-repeat 70% 50%;
+  background: url("../img/icon/ico_down_16x10.png") no-repeat 70% 50%;
   overflow: hidden;
 }
 .select_box ul {
@@ -175,6 +179,7 @@ h1 {
   text-overflow: ellipsis;
   /*말줄임 적용*/
 }
+
 .select_box ul {
   display: none;
   width: 183px;
@@ -186,8 +191,6 @@ h1 {
   display: initial;
 }
 
-select {
-}
 select::-ms-expand {
   display: none;
 }

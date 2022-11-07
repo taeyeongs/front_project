@@ -1,13 +1,7 @@
 @charset "UTF-8";
 /* @import url('./css/common.css'); */
 
-main {
-  width: 1050px;
-  /* height:500px; */
-  margin: 0 auto;
-}
 .image {
-  background: yellowgreen;
   width: 1050px;
   height: 400px;
 }
@@ -22,10 +16,6 @@ main {
   flex-direction: row;
   width: 1050px;
   margin-bottom:50px;
-}
-.sub_category {
-  /* background: yellow; */
-  width: 220px;
 }
 /* .content__products{
     width: 100%;
@@ -130,10 +120,11 @@ ul.sorts .sort::after {
 .fileter_wrap_area {
   position: sticky;
   top: 60px;
-  width: 200px;
+  width: 190px;
   max-height: calc(100vh - 120px);
   overflow: hidden scroll;
   border-bottom: 1px solid #ddd;
+  padding-left:10px;
   margin-right: 20px;
 }
 

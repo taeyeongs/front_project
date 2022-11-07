@@ -1,36 +1,5 @@
 @charset "utf-8";
 
-/* * {
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  font-family: "Noto Sans", "malgun gothic", AppleGothic, dotum, sans-serif;
-  line-height: 1.15;
-}
-
-div {
-  display: block;
-} */
-
-/* ul */
-ul li {
-  list-style: none;
-}
-
-body {
-  display: block;
-  background: white;
-  padding: 0px;
-  font-size: 14px;
-  height: 100%;
-}
-
-header {
-  background-color: aquamarine;
-}
-
 .signup {
   min-width: 1050px;
   margin-top: 50px;
@@ -125,7 +94,7 @@ header {
 } */
 
 .list_btn {
-  border-color: aqua;
+  border-color: purple;
   background: white;
   width: 100px;
   height: 48px;
@@ -140,9 +109,9 @@ header {
   width: 430px;
   height: 46px;
   border-radius: 4px;
-  color: aqua;
+  color: purple;
   background-color: white;
-  border: 1px solid aqua;
+  border: 1px solid purple;
 }
 
 .content_bnt_spa {
@@ -310,7 +279,9 @@ header {
   display: block;
   margin: 0 auto;
   overflow: hidden;
-  border-color: aqua;
+  border-color: purple;
+  color:white;
+  background-color: purple;
 }
 
 .alert_msg {

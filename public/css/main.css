@@ -1,21 +1,5 @@
 @charset "UTF-8";
 
-/* * {
-  margin: 0 auto;
-  padding: 0;
-}
-
-html {
-  font-family: "Noto Sans", "malgun gothic", AppleGothic, dotum, sans-serif;
-  line-height: 1.15;
-}
-
-a {
-  background-color: transparent;
-  text-decoration: none;
-  color: inherit;
-} */
-
 .slide_1set {
   height: 370px;
   padding-bottom: 20px;
@@ -117,99 +101,15 @@ a {
   padding: 10px;
 }
 
-.mySwiper2 .slide4 {
-  background: url(../img/product/4-1.png);
-  background-size: cover;
-  background-position: center;
+.mySwiper2 .swiper-slide {
   height: 357px;
 }
-
-.mySwiper2 .slide4 p {
-  margin-top: 360px;
-  font-weight: bold;
+.mySwiper2 img {
+  height:300px;
 }
 
-.mySwiper2 .slide5 {
-  background: url(../img/product/4-2.png);
-  background-size: cover;
-  background-position: center;
-  height: 357px;
-}
-
-.mySwiper2 .slide5 p {
-  margin-top: 360px;
-  font-weight: bold;
-}
-
-.mySwiper2 .slide6 {
-  background: url(../img/product/4-3.png);
-  background-size: cover;
-  background-position: center;
-  height: 357px;
-}
-
-.mySwiper2 .slide6 p {
-  margin-top: 360px;
-  font-weight: bold;
-}
-
-.mySwiper2 .slide7 {
-  background: url(../img/product/4-4.png);
-  background-size: cover;
-  background-position: center;
-  height: 357px;
-}
-
-.mySwiper2 .slide7 p {
-  margin-top: 360px;
-  font-weight: bold;
-}
-
-.mySwiper2 .slide8 {
-  background: url(../img/product/4-5.png);
-  background-size: cover;
-  background-position: center;
-  height: 357px;
-}
-
-.mySwiper2 .slide8 p {
-  margin-top: 360px;
-  font-weight: bold;
-}
-
-.mySwiper2 .slide9 {
-  background: url(../img/product/4-6.png);
-  background-size: cover;
-  background-position: center;
-  height: 357px;
-}
-
-.mySwiper2 .slide9 p {
-  margin-top: 360px;
-  font-weight: bold;
-}
-
-.mySwiper2 .slide10 {
-  background: url(../img/product/4-7.png);
-  background-size: cover;
-  background-position: center;
-  height: 357px;
-}
-
-.mySwiper2 .slide10 p {
-  margin-top: 360px;
-  font-weight: bold;
-}
-
-.mySwiper2 .slide11 {
-  background: url(../img/product/4-8.png);
-  background-size: cover;
-  background-position: center;
-  height: 357px;
-}
-
-.mySwiper2 .slide11 p {
-  margin-top: 360px;
+.mySwiper2 p {
+  /* margin-top: 360px; */
   font-weight: bold;
 }
 
