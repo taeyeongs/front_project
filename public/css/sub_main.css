@@ -9,7 +9,7 @@
 .sub_title {
   text-align: center;
   padding: 20px;
-  font-size: 2rem;
+  /* font-size: 2rem; */
 }
 .content {
   display: flex;
