@@ -25,12 +25,12 @@
 }
 
 .button_fixed > .button_area {
-  width:1050px;
-  margin:0 auto;
+  width: 1050px;
+  margin: 0 auto;
   /* background-color: rgba(255,255,255, 0); */
 }
 
-.button_area >.button_fixed3 {
+.button_area > .button_fixed3 {
   display: inline-block;
   cursor: pointer;
   color: #fff;
@@ -45,7 +45,7 @@
 .bottom_fixed_line {
   /* clear:both; */
   border-top: 2px solid rgb(95, 0, 128);
-  height:20px;
+  height: 20px;
   background-color: rgb(255, 255, 255);
 }
 
@@ -58,31 +58,30 @@
 }
 
 .button_fixed2 > .in_bt_1 {
-  height:100%;
-  width:900px;
+  height: 100%;
+  width: 900px;
   margin: 0px auto;
   /* margin-top: 20px; */
 }
 
 .bottom_product_name {
-  padding-bottom:20px;
+  padding-bottom: 20px;
 }
 .count_area {
   width: 120px;
   height: 40px;
-  line-height: 40px;;
+  line-height: 40px;
   display: inline-block;
   border: 1px solid gainsboro;
   text-align: center;
 }
-
 
 .count_area .minus_button {
   /* background-color: transparent; */
   /* outline: transparent; */
   font-size: 20px;
   cursor: pointer;
-} 
+}
 .count_area .count {
   text-align: center;
   margin-left: 13px;
@@ -98,7 +97,7 @@
 .price_area {
   text-align: right;
 }
-.price_area span{
+.price_area span {
   display: inline-block;
 }
 .text_6 {
@@ -118,7 +117,6 @@
   text-align: right;
   margin-top: 20px;
 }
-
 
 .button_area .heart_button {
   width: 56px;
@@ -184,8 +182,6 @@
   margin-bottom: 20px;
 }
 
-
-
 .section5 {
   margin-top: 55px;
   font-size: 18px;
@@ -221,10 +217,6 @@
   margin-top: 30px;
   color: rgb(95, 0, 128);
 }
-
-
-
-
 
 .vum {
   border-top: 1px solid grey;
@@ -281,7 +273,6 @@
   line-height: 19px;
 }
 
-
 .bt_link {
   top: 56px;
   width: 1010px;
@@ -296,7 +287,7 @@
 .bt_link2 {
   text-decoration: none;
   position: sticky;
-  top: 0px;
+  top: 60px;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -304,6 +295,7 @@
   border-bottom: gainsboro 1px solid;
   border-width: 1px 1px 0px 1px;
   text-decoration: none;
+  background-color: white;
 }
 
 .bt_link2 a {
@@ -905,7 +897,7 @@
   color: rgb(51, 51, 51);
   padding-bottom: 20px;
   font-weight: bold;
-  height:58px;
+  height: 58px;
   line-height: 58px;
   border-bottom: 1px solid rgb(51, 51, 51);
 }
@@ -915,7 +907,7 @@
   border-bottom: 1px solid rgb(244, 244, 244);
   line-height: 64px;
   letter-spacing: -0.5px;
-  text-align:center
+  text-align: center;
 }
 
 .tr_3 {
