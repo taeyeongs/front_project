@@ -177,9 +177,9 @@
 .button_2 {
     background-color: transparent;
     outline: transparent;
-    
+    border-style: none;
     font-size: 20px;
-    
+ 
 }
 
 .count {
@@ -190,7 +190,7 @@
 .button_2_1 {
     background-color: transparent;
     outline: transparent;
-    
+    border-style: none;
     font-size: 20px;
 }
 
