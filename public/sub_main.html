@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>신상품</title>
+    <link rel="stylesheet" type="text/css" href="./css/common.css" />
+    <link
+      rel="stylesheet"
+      type="text/html"
+      href="../img/icon/fontawesome-free-6.2.0-web/"
+    />
+    <link
+      rel="stylesheet"
+      property="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./css/sub_main.css"
+      id="css-style"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="fix_menu" style="z-index: 100; display: none">
+        <div class="fix_menu2">
+          <div class="fix_menu3">
+            <div
+              class="fix_category"
+              onmouseover="dispShow('category_menus');"
+              onmouseout="dispHidden('category_menus');"
+            >
+              <img src="./img/icon/menu.png" alt="menu" />
+              <div class="fix_menu_category">카테고리</div>
+              <div
+                class="fix_category_submenu"
+                id="category_menus"
+                style="z-index: 10; display: none"
+                onmouseover="dispShow('category_menus');"
+                onmouseout="dispHidden('category_menus');"
+              >
+                <div
+                  onmouseover="dispShow('category_submenus');"
+                  onmouseout="dispHidden('category_submenus');"
+                >
+                  <img src="./img/icon/giftbox.png" alt="오류" />
+                  선물하기
+                </div>
+                <div onmouseover="dispHidden('category_submenus');">
+                  <img src="./img/icon/fruit.png" alt="오류" />
+                  과일·견과·쌀
+                </div>
+                <div onmouseover="dispHidden('category_submenus');">
+                  <img src="./img/icon/bread.png" alt="오류" />
+                  베이커리·치즈·델리
+                </div>
+                <div onmouseover="dispHidden('category_submenus');">
+                  <img src="./img/icon/restaurant.png" alt="오류" />
+                  주방용품
+                </div>
+                <div onmouseover="dispHidden('category_submenus');">
+                  <img src="./img/icon/household.png" alt="오류" />
+                  가전제품
+                </div>
+              </div>
+            </div>
+            <div
+              class="fix_category_submenu2"
+              id="category_submenus"
+              style="z-index: 10; display: none"
+              onmouseover="dispShow('category_menus'); dispShow('category_submenus');"
+              onmouseout="dispHidden('category_menus'); dispHidden('category_submenus');"
+            >
+              <div>홍삼·즙</div>
+              <div>건강식품</div>
+              <div>베이커리·커피·차</div>
+              <div>뷰티·향수·꽃</div>
+              <div>리빙·생활·유아동</div>
+            </div>
+          </div>
+          <div class="fix_submenu">
+            <a href="./sub_main.html">신상품</a>
+            <a onclick="alert_mag()">베스트</a>
+            <a onclick="alert_mag()">알뜰쇼핑</a>
+            <a onclick="alert_mag()">특가/혜택</a>
+          </div>
+    
+          <div class="fix_menu_search">
+            <input
+              type="text"
+              class="fix_menu_input"
+              id="fix_menu_id"
+              onkeyup="searchID2();"
+              placeholder="검색어를 입력해주세요"
+            />
+            <img
+              src="./img/icon/x.png"
+              alt="오류"
+              class="fix_menu_x"
+              id="fix_menu_x"
+              style="display: none; cursor: pointer"
+              onclick="searchClear2();"
+            />
+            <i
+              class="fa-solid fa-magnifying-glass"
+              onclick="alert_mag()"
+              style="display: block"
+            ></i>
+          </div>
+        </div>
+      </div>
+    
+      <div class="header_wrap">
+        <div class="header">
+          <div class="header_left">
+            <a href="./sign_up.html" class="sign">회원가입</a>
+            <div class="bar"></div>
+            <a href="javascript:void(0);" class="login">로그인</a>
+            <div class="bar"></div>
+            <div class="center" onmouseover="dispShow('Submenu');" onmouseout="dispHidden('Submenu');">
+              <a href="javascript:void(0);" class="client"
+                >고객센터 <i class="fa-solid fa-caret-down"></i
+              ></a>
+              <div
+                class="menu_list"
+                id="Submenu"
+                style="display: none; z-index: 1"
+                onmouseover="dispShow('Submenu');"
+                onmouseout="dispHidden('Submenu');"
+              >
+                <div class="center_list" onclick="alert_mag()">공지사항</div>
+                <div class="center_list"><a href="./customer_center.html">자주하는 질문</a></div>
+                <div class="center_list" onclick="alert_mag()">1:1 문의</div>
+                <div class="center_list" onclick="alert_mag()">대량주문 문의</div>
+              </div>
+            </div>
+          </div>
+          <div class="header_nav">
+            <div class="header_logo">
+              <a href="./">
+                <img src="./img/icon/logo.png" alt="MARKET" />
+              </a>
+            </div>
+            <div class="header_search">
+              <input
+                type="text"
+                class="header_input"
+                id="search_id"
+                onkeyup="searchID();"
+                placeholder="검색어를 입력해주세요"
+              />
+              <button
+                type="button"
+                class="header_x"
+                id="search_x"
+                style="display: none; cursor: pointer"
+                onclick="searchClear();"
+              >
+                <img src="./img/icon/x.png" alt="오류" />
+              </button>
+              <button type="button" class="header_bt">
+                <i class="fa-solid fa-magnifying-glass" onclick="alert_mag()"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+    
+        <div class="header_menu_wrap">
+          <div class="header_menu">
+            <div class="header_menu2">
+              <div
+                class="header_category"
+                onmouseover="dispShow('main_menu');"
+                onmouseout="dispHidden('main_menu');"
+              >
+                <img
+                  style="cursor: pointer"
+                  src="./img/icon/menu.png"
+                  alt="menu"
+                />
+                <span class="header_menu_category">카테고리</span>
+              </div>
+    
+              <div
+                class="header_main_menu"
+                id="main_menu"
+                style="display: none; z-index: 10"
+                onmouseover="dispShow('main_menu');"
+                onmouseout="dispHidden('main_menu');"
+              >
+                <div
+                  onmouseover="dispShow('sub_menu');"
+                  onmouseout="dispHidden('sub_menu');"
+                >
+                  <img src="./img/icon/giftbox.png" alt="오류" /> 선물하기
+                </div>
+                <div onmouseover="dispHidden('sub_menu');" onclick="alert_mag()">
+                  <img src="./img/icon/fruit.png" alt="오류" /> 과일·견과·쌀
+                </div>
+                <div onmouseover="dispHidden('sub_menu');" onclick="alert_mag()">
+                  <img src="./img/icon/bread.png" alt="오류" />
+                  베이커리·치즈·델리
+                </div>
+                <div onmouseover="dispHidden('sub_menu');" onclick="alert_mag()">
+                  <img src="./img/icon/restaurant.png" alt="오류" /> 주방용품
+                </div>
+                <div onmouseover="dispHidden('sub_menu');" onclick="alert_mag()">
+                  <img src="./img/icon/household.png" alt="오류" /> 가전제품
+                </div>
+              </div>
+              <div
+                class="header_sub_menu"
+                id="sub_menu"
+                style="display: none; z-index: 10"
+                onmouseover="dispShow('main_menu'); dispShow('sub_menu');"
+                onmouseout="dispHidden('main_menu'); dispHidden('sub_menu');"
+              >
+                <div onclick="alert_mag()">홍삼·즙</div>
+                <div onclick="alert_mag()">건강식품</div>
+                <div onclick="alert_mag()">베이커리·커피·차</div>
+                <div onclick="alert_mag()">뷰티·향수·꽃</div>
+                <div onclick="alert_mag()">리빙·생활·유아동</div>
+              </div>
+            </div>
+            <div class="header_menu3">
+              <a href="./sub_main.html" class="header_menu_list">신상품</a>
+              <a href="javascript:void(0);" onclick="alert_mag()" class="header_menu_list">베스트</a>
+              <a href="javascript:void(0);" onclick="alert_mag()" class="header_menu_list">알뜰쇼핑</a>
+              <a href="javascript:void(0);" onclick="alert_mag()" class="header_menu_list">특가/혜택</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="wrap">
+      <div class="image">
+        <img src="./img/banner/new_product_banner.jpg" alt="새로나운상품배너" />
+      </div>
+      <div class="sub_title"><h2>신상품</h2></div>
+      <div class="content">
+        <section class="filter_wrap">
+          <div class="fileter_wrap_area">
+            <div class="fileter">필터</div>
+            <div class="filter_list">
+              <div class="filter_title">카테고리</div>
+              <ul>
+                <li>
+                  <input
+                    type="checkbox"
+                    class="filter_item"
+                    name="filter_category"
+                    value="국·반찬·메인요리"
+                  /><span>국·반찬·메인요리</span>
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    class="filter_item"
+                    name="filter_category"
+                    value="샐러드·간편식"
+                  /><span>샐러드·간편식</span>
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    class="filter_item"
+                    name="filter_category"
+                    value="간식·과자·떡"
+                  /><span>간식·과자·떡</span>
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    class="filter_item"
+                    name="filter_category"
+                    value="생활용품·리빙·캠핑"
+                  /><span>생활용품·리빙·캠핑</span>
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    class="filter_item"
+                    name="filter_category"
+                    value="베이비·키즈·완구"
+                  /><span>베이비·키즈·완구</span>
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    class="filter_item"
+                    name="filter_category"
+                    value="면·양념·오일"
+                  /><span>면·양념·오일</span>
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    class="filter_item"
+                    name="filter_category"
+                    value="생수음료우유커피"
+                  /><span>생수음료우유커피</span>
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    class="filter_item"
+                    name="filter_category"
+                    value="수산해산건어물"
+                  /><span>수산해산건어물</span>
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    class="filter_item"
+                    name="filter_category"
+                    value="베이커리·치즈·델리"
+                  /><span>베이커리·치즈·델리</span>
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    class="filter_item"
+                    name="filter_category"
+                    value="filter_category"
+                  /><span>스킨케어·메이크업</span>
+                </li>
+              </ul>
+              <div class="filter_more">카테고리 더보기></div>
+            </div>
+            <div class="filter_list">
+              <div class="filter_title">브랜드</div>
+              <ul>
+                <li>
+                  <input
+                    type="checkbox"
+                    class="filter_item"
+                    name="filter_brand"
+                    value="감자밭"
+                  /><span>감자밭</span>
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    class="filter_item"
+                    name="filter_brand"
+                    value="그래놀라 하우스"
+                  /><span>그래놀라 하우스</span>
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    class="filter_item"
+                    name="filter_brand"
+                    value="글래드 호텔"
+                  /><span>글래드 호텔</span>
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    class="filter_item"
+                    name="filter_brand"
+                    value="나우푸드"
+                  /><span>나우푸드</span>
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    class="filter_item"
+                    name="filter_brand"
+                    value="닥터그루트"
+                  /><span>닥터그루트</span>
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    class="filter_item"
+                    name="filter_brand"
+                    value="더랩바이블랑두"
+                  /><span>더랩바이블랑두</span>
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    class="filter_item"
+                    name="filter_brand"
+                    value="더마틱스"
+                  /><span>더마틱스</span>
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    class="filter_item"
+                    name="filter_brand"
+                    value="동구밭"
+                  /><span>동구밭</span>
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    class="filter_item"
+                    name="filter_brand"
+                    value="듀니"
+                  /><span>듀니</span>
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    class="filter_item"
+                    name="filter_brand"
+                    value="듀이트리"
+                  /><span>듀이트리</span>
+                </li>
+              </ul>
+              <div class="filter_more">브랜드 더보기></div>
+            </div>
+            <div class="filter_list">
+              <div class="filter_title">가격</div>
+              <ul>
+                <li>
+                  <input
+                    type="radio"
+                    class="filter_item"
+                    name="filter_price"
+                    value="7,800원 미만"
+                  /><span>7,800원 미만</span>
+                </li>
+                <li>
+                  <input
+                    type="radio"
+                    class="filter_item"
+                    name="filter_price"
+                    value="7,800원 ~ 11,900원"
+                  /><span>7,800원 ~ 11,900원</span>
+                </li>
+                <li>
+                  <input
+                    type="radio"
+                    class="filter_item"
+                    name="filter_price"
+                    value="11,900원 ~ 19,900원"
+                  /><span>11,900원 ~ 19,900원</span>
+                </li>
+                <li>
+                  <input
+                    type="radio"
+                    class="filter_item"
+                    name="filter_price"
+                    value="19,900원이상"
+                  /><span>19,900원이상</span>
+                </li>
+              </ul>
+            </div>
+            <div class="filter_list">
+              <div class="filter_title">혜택</div>
+              <ul>
+                <li>
+                  <input
+                    type="checkbox"
+                    class="filter_item"
+                    name="filter_price"
+                    value="할인상품"
+                  /><span>할인상품</span>
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    class="filter_item"
+                    name="filter_price"
+                    value="한정수량"
+                  /><span>한정수량</span>
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    class="filter_item"
+                    name="filter_price"
+                    value="단독특가"
+                  /><span>단독특가</span>
+                </li>
+              </ul>
+            </div>
+            <div class="filter_list">
+              <div class="filter_title">유형</div>
+              <ul>
+                <li><input type="checkbox" value="선물하기" /><span>선물하기</span></li>
+                <li><input type="checkbox" value="only" /><span>only</span></li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section class="content__products">
+          <div class="products__top">
+            <div class="count">총 9건</div>
+            <ul class="sorts">
+              <li class="sort">
+                추천순
+                <a href="">
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 14 14"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M6.9932 0.700195C8.73506 0.700195 10.3116 1.40557 11.4528 2.54565C12.5943 3.68594 13.3002 5.26111 13.3002 7.0002C13.3002 8.73928 12.5943 10.3145 11.4528 11.4547C10.3116 12.5948 8.73506 13.3002 6.9932 13.3002C5.25512 13.3002 3.68233 12.595 2.54387 11.4554C1.40457 10.315 0.700195 8.73952 0.700195 7.0002C0.700195 5.26087 1.40457 3.68541 2.54387 2.54497C3.68233 1.40537 5.25512 0.700195 6.9932 0.700195Z"
+                      stroke="#999"
+                      stroke-width="1.4"
+                    ></path>
+                    <path
+                      d="M4.5 5.21081H5.77027C5.81351 4.55135 6.26216 4.12973 6.95946 4.12973C7.64054 4.12973 8.09459 4.53514 8.09459 5.0973C8.09459 5.58784 7.90383 5.86944 7.35576 6.22524L7.1973 6.32432C6.45135 6.76216 6.13784 7.24865 6.18649 8.05946L6.19189 8.42703H7.44595V8.11892C7.44595 7.58378 7.64595 7.30811 8.35405 6.89189C9.08919 6.45405 9.5 5.87568 9.5 5.04865C9.5 3.85405 8.51081 3 7.02973 3C5.42432 3 4.54324 3.92973 4.5 5.21081ZM6.87838 11.0054C6.33784 11.0054 5.98108 10.6649 5.98108 10.1459C5.98108 9.62162 6.33784 9.28108 6.87838 9.28108C7.42973 9.28108 7.77568 9.62162 7.77568 10.1459C7.77568 10.6649 7.42973 11.0054 6.87838 11.0054Z"
+                      fill="#999"
+                    ></path>
+                  </svg>
+                </a>
+                <div class="recommend_sort_desc">
+                  소비자 인기도(판매량, 판매금액, 조회수 등), 상품 출시일, 수요
+                  적합성, 상품 운영상 필요 등을 종합적으로 고려한 순서입니다.
+                </div>
+              </li>
+              <li class="sort">신상품순</li>
+              <li class="sort">판매량순</li>
+              <li class="sort">혜택순</li>
+              <li class="sort">낮은가격순</li>
+              <li class="sort">높은가격순</li>
+            </ul>
+          </div>
+          <div class="product_search">
+            <div class="product_search_area"> </div>
+          </div>
+          <div class="products__list">
+            <div class="product">
+              <a href="./product_detail.html">
+              <div class="product__img">
+                <img src="./img/product/product1.jpg" alt="상품이미지1" />
+              </div>
+              <div class="product__delivery_type">샛별배송</div>
+              <div class="product__name">[농부의 꽃]맨스필드파크 5줄기</div>
+              <div class="product__price">22,900 원</div>
+              <div class="product__discript">플래식하고 우아한 맵시</div>
+            </a>
+            </div>
+            <div class="product">
+              <a href="./product_detail.html">
+              <div class="product__img">
+                <img src="./img/product/product2.jpg" alt="상품이미지1" />
+              </div>
+              <div class="product__delivery_type">샛별배송</div>
+              <div class="product__name">[농부의 꽃]실바써니 5줄기</div>
+              <div class="product__price">22,900 원</div>
+              <div class="product__discript">공간을 밝히는 화사함</div>
+              </a>
+            </div>
+            <div class="product">
+              <a href="./product_detail.html">
+              <div class="product__img">
+                <img src="./img/product/product3.jpg" alt="상품이미지1" />
+              </div>
+              <div class="product__delivery_type">샛별배송</div>
+              <div class="product__name">[농부의 꽃] 가시 있는 슈퍼센세이션 장비 7대</div>
+              <div class="product__price">18,700 원</div>
+              <div class="product__discript">감각을 깨우는 다채로운 핑크</div>
+            </a>
+            </div>
+            <div class="product">
+              <a href="./product_detail.html">
+              <div class="product__img">
+                <img src="./img/product/product4.jpg" alt="상품이미지1" />
+              </div>
+              <div class="product__delivery_type">샛별배송</div>
+              <div class="product__name">[농부의 꽃] 스파클링 센세이션 5줄</div>
+              <div class="product__price">22,900 원</div>
+              <div class="product__discript">활기를 북돋는 싱그러움</div>
+              </a>
+            </div>
+            <div class="product">
+              <a href="./product_detail.html">
+              <div class="product__img">
+                <img src="./img/product/product5.jpg" alt="상품이미지1" />
+              </div>
+              <div class="product__delivery_type">샛별배송</div>
+              <div class="product__name">[농부의 꽃] 실바핑크 5줄</div>
+              <div class="product__price">22,000 원</div>
+              <div class="product__discript">마음을 매료하는 분홍 장미</div>
+              </a>
+            </div>
+            <div class="product">
+              <a href="./product_detail.html">
+              <div class="product__img">
+                <img src="./img/product/product6.jpg" alt="상품이미지1" />
+              </div>
+              <div class="product__delivery_type">샛별배송</div>
+              <div class="product__name">[농부의 꽃] 가시 있는 자나 장미 7대</div>
+              <div class="product__price">18,900 원</div>
+              <div class="product__discript">상품간단설명</div>
+              </a>
+            </div>
+            <div class="product">
+              <a href="./product_detail.html">
+              <div class="product__img">
+                <img src="./img/product/product7.jpg" alt="상품이미지1" />
+              </div>
+              <div class="product__delivery_type">샛별배송</div>
+              <div class="product__name">[농부의 꽃]플라워 푸드20개</div>
+              <div class="product__price">4,990 원</div>
+              <div class="product__discript">꽃을 오래 감상하는 방법</div>
+              </a>
+            </div>
+            <div class="product">
+              <a href="./product_detail.html">
+              <div class="product__img">
+                <img src="./img/product/product8.jpg" alt="상품이미지1" />
+              </div>
+              <div class="product__delivery_type">샛별배송</div>
+              <div class="product__name">[농부의 꽃] 장미 시즌 믹스 7대</div>
+              <div class="product__price">18,900 원</div>
+              <div class="product__discript">다채로운 장미를 만나볼 기회</div>
+              </a>
+            </div>
+            <div class="product">
+              <a href="./product_detail.html">
+              <div class="product__img">
+                <img src="./img/product/product9.jpg" alt="상품이미지1" />
+              </div>
+              <div class="product__delivery_type">샛별배송</div>
+              <div class="product__name">[농부의 꽃] 가시 있는 어텀파티미니 장미 7대</div>
+              <div class="product__price">17,900 원</div>
+              <div class="product__discript">가을을 담은 작은 팔레트</div>
+              </a>
+            </div>
+          </div>
+          <div class="page">
+            <a href="" class="first">&lt;&lt;</a>
+            <a href="" class="prev">&lt;</a>
+            <a href="" class="nums on">1</a>
+            <a href="" class="nums">2</a>
+            <a href="" class="nums">3</a>
+            <a href="" class="nums">4</a>
+            <a href="" class="nums">5</a>
+            <a href="" class="next">&gt;</a>
+            <a href="" class="end">&gt;&gt;</a>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <div>
+        <div id="footer">
+          <div class="footer_content">
+            <div class="footer_happiness_contact">
+              <h2>market고객행복센터<span>365일 오전7시 - 오후11시</span></h2>
+              <strong class="happiness_contact_stro">2580-2580</strong>
+              <div class="happiness_contact_btn">
+                <button class="contact_btn1">카카오톡 문의</button>
+                <button class="contact_btn">1:1 문의</button>
+                <button class="contact_btn">대량주문 문의</button>
+              </div>
+              <div class="happiness_contact_email">
+                비회원 문의: <a href="#"> sirulong@gmail.com</a><br />비회원
+                대량주문 문의: <a href="#"> sirulong1@gmail.com</a>
+              </div>
+            </div>
+            <div class="footer_introduce_content">
+              <ul class="footer_introduce_content_mana">
+                <li>
+                  <a
+                    href="javascript:void(0);"
+                    class="introduce_content_matt"
+                    onclick="alert_mag();"
+                    >마켓소개</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="javascript:void(0);"
+                    class="introduce_content_matt"
+                    onclick="alert_mag();"
+                    >마켓소개영상</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="javascript:void(0);"
+                    class="introduce_content_matt"
+                    onclick="alert_mag();"
+                    >인재채용</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="javascript:void(0);"
+                    class="introduce_content_matt"
+                    onclick="alert_mag();"
+                    >이용약관</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="javascript:void(0);"
+                    class="introduce_content_matt"
+                    onclick="alert_mag();"
+                    >개인정보처리방침</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="javascript:void(0);"
+                    class="introduce_content_matt"
+                    onclick="alert_mag();"
+                    >이용안내</a
+                  >
+                </li>
+              </ul>
+              <div class="footer_enterprise">
+                법인명(상호): 5조 | 사업자등록증번호: 123-12-12345"<a href="#"
+                  >사업자정보 확인</a
+                >
+                <br />주소: 서울특별시 강남구 바로 여기 | 대표이사: 오조
+              </div>
+              <ul class="icon_queue">
+                <li>
+                  <a
+                    href="javascript:void(0);"
+                    class="icon_pto"
+                    onclick="alert_mag();"
+                    ><img src="./img/product/icon_instagram.png" alt=""
+                  /></a>
+                </li>
+                <li>
+                  <a
+                    href="javascript:void(0);"
+                    class="icon_pto"
+                    onclick="alert_mag();"
+                    ><img src="./img/product/icon_facebook.png" alt=""
+                  /></a>
+                </li>
+                <li>
+                  <a
+                    href="javascript:void(0);"
+                    class="icon_pto"
+                    onclick="alert_mag();"
+                    ><img src="./img/product/icon_naver_blog.png" alt=""
+                  /></a>
+                </li>
+                <li>
+                  <a
+                    href="javascript:void(0);"
+                    class="icon_pto"
+                    onclick="alert_mag();"
+                    ><img src="./img/product/icon_naver_post.png" alt=""
+                  /></a>
+                </li>
+                <li>
+                  <a
+                    href="javascript:void(0);"
+                    class="icon_pto"
+                    onclick="alert_mag();"
+                    ><img src="./img/product/icon_youtube.png" alt=""
+                  /></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer_approve">
+            <button class="footer_approve_btn">
+              <img src="./img/product/icon_identification.png" alt="" />
+              <p class="footer_approve_lett">
+                [인증범위] 마켓컬리 쇼핑몰 서비스 개발·운영<br />(심사받지 않은
+                물리적 인프라 제외) <br />[유효기간] 2022.01.19 ~ 2025.01.18
+              </p>
+            </button>
+            <button class="footer_approve_btn">
+              <img src="./img/product/icon_personnal_information.png" alt="" />
+              <p class="footer_approve_lett">
+                개인정보보호 우수 웹사이트 <br />개인정보처리시스템 인증 (ePRIVACY
+                PLUS)
+              </p>
+            </button>
+            <button class="footer_approve_btn">
+              <img src="./img/product/icon_payment.png" alt="" />
+              <p class="footer_approve_lett">
+                토스페이먼츠 구매안전(에스크로) <br />서비스를 이용하실 수
+                있습니다.
+              </p>
+            </button>
+            <button class="footer_approve_btn">
+              <img src="./img/product/icon_woori.png" alt="" />
+              <p class="footer_approve_lett">
+                고객님이 현금으로 결제한 금액에 대해 우리은행과 <br />채무지급보증
+                계약을 체결하여 안전거래를 보장하고 <br />있습니다.
+              </p>
+            </button>
+          </div>
+        </div>
+    
+        <div class="footer_rear">
+          <p>
+            마켓에서 판매되는 상품 중에는 마켓에 입점한 개별 판매자가 판매하는
+            마켓플레이스(오픈마켓) 상품이 포함되어 있습니다.
+            <br />마켓플레이스(오픈마켓) 상품의 경우 컬리는 통신판매중개자로서
+            통신판매의 당사자가 아닙니다. 컬리는 해당 상품의 주문, 품질, 교환/환불
+            등 의무와 책임을 부담하지 않습니다.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script type="text/javascript">
+      
+    </script>
+    <script src="./js/sub_main.js"></script>
+    <script src="./js/common.js"></script>
+  </body>
+</html>

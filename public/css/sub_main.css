@@ -1,96 +1,181 @@
 @charset "UTF-8";
 /* @import url('./css/common.css'); */
 
-main {
-    width:1050px;
-    /* height:500px; */
-    margin:0 auto;
-    background: gold;
-}
 .image {
-    background: yellowgreen;
-    width:1050px;
-    height:400px;
+  width: 1050px;
+  height: 400px;
 }
 
 .sub_title {
-    text-align: center;
-    padding:20px;
-    font-size: 2rem;
+  text-align: center;
+  padding: 20px;
+  font-size: 2rem;
 }
 .content {
-    background: blueviolet;
-    display: flex;
-    flex-direction: row;
-    width:1050px;
-}
-.sub_category {
-    background: yellow;
-    width:220px;
+  display: flex;
+  flex-direction: row;
+  width: 1050px;
+  margin-bottom:50px;
 }
 /* .content__products{
     width: 100%;
 } */
 
+.recommend_sort_desc {
+  display: none;
+}
+
+.products__top {
+  width: 100%;
+  height: 30px;
+}
+
+.products__top .count {
+  float: left;
+  font-weight: bold;
+}
+
+.products__top ul.sorts {
+  float: right;
+  display: flex;
+  flex-direction: row;
+  font-size: 0.9rem;
+}
+
+ul.sorts .sort::after {
+  text-align: center;
+  line-height: 1.4rem;
+  content: "";
+  width: 1px;
+  height: 20px;
+  margin-right: 20px;
+  background: 1px solid #000000;
+}
+
 .products__list {
-    background: red;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: stretch;
-    width:830px;
+  /* background: red; */
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 830px;
 }
 
 .product {
-    background: beige;
-    text-align:left;
-    width:31%;
-    overflow: hidden;
-    word-break: break-all;
-    margin:0 0 30px 0;
+  /* background: beige; */
+  text-align: left;
+  width: 249px;
+  overflow: hidden;
+  word-break: break-all;
+  margin: 0 0 30px 0;
 }
 
 .product .product__img {
-    width:249px;
-    height:320px;
+  width: 249px;
+  height: 320px;
+  text-align: center;
+  margin-bottom: 10px;
 }
 .product__img img {
-    width:100%;
-    height:100%;
+  width: 100%;
+  height: 100%;
+  text-align: center;
 }
 
 .product .product__delivery_type {
-    color:gainsboro;
+  color: #aaa;
 }
 .product .product__price {
-    font-weight:bold;
+  font-weight: 800;
 }
 
 .product__name {
-    line-height:200%;
+  line-height: 200%;
 }
 .product__discript {
-    color:gainsboro;
-    font-size: 0.8rem;
-    line-height: 300%;
+  color: #aaa;
+  font-size: 0.8rem;
+  line-height: 300%;
 }
 
-.content__products .page{
-    display: block;
-    text-align: center;
-    width:100%;
+.content__products .page {
+  display: block;
+  text-align: center;
+  width: 100%;
 }
 
-.content__products .page a{
-    display: inline-block;
-    
-    padding:10px 15px;
-    border:1px solid #ddd;
-    box-sizing: border-box;
+.content__products .page a {
+  display: inline-block;
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
 }
 
 .page a.on {
-    background: #000;
-    color:#fff;
+  background: #000;
+  color: #fff;
+}
+
+.fileter_wrap_area {
+  position: sticky;
+  top: 60px;
+  width: 190px;
+  max-height: calc(100vh - 120px);
+  overflow: hidden scroll;
+  border-bottom: 1px solid #ddd;
+  padding-left:10px;
+  margin-right: 20px;
+}
+
+.fileter_wrap_area li {
+  line-height: 2rem;
+  font-size: 0.9rem;
+}
+
+.filter_more {
+  font-size: 0.8rem;
+  text-align: center;
+  color: #aaa;
+  padding: 15px 0 15px 0;
+}
+
+.filter_list {
+  border-bottom: 1px solid #ddd;
+}
+
+.filter_list .filter_title {
+  padding: 20px 0 10px 0;
+}
+.filter_list li span {
+  display: inline-block;
+  text-indent: 10px;
+}
+
+.product_search {
+  /* flex-wrap: wrap; */
+  display: none;
+  padding: 5px;
+  border: 1px solid #ddd;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.product_search_area {
+  display: flex;
+  flex-flow: wrap;
+}
+
+.product_search_area div {
+  color: blueviolet;
+  margin: 10px 10px 10px 10px;
+  /* box-sizing: border-box; */
+}
+.item_area {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.filter_text_del {
+  color: #aaa;
 }
