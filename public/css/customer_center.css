@@ -36,7 +36,7 @@
   /* width:90%; */
 }
 .Lside_header {
-  margin-bottom: 50px;
+  margin-bottom: 7px;
 }
 .Lside_bt {
   display: inline-block;
@@ -106,6 +106,7 @@
   display: block;
 } */
 h1 {
+  line-height: 55px;
   letter-spacing: -1px;
   color: #333;
   font-weight: bolder;
