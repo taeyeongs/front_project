@@ -142,8 +142,6 @@ h1 {
   height: 50px;
   border-collapse: collapse;
   background: url("../img/icon/ico_down_16x10.png") no-repeat right 11px center;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
   display: inline-block;
   border: 1px solid rgba(0, 0, 0, 0.1);
