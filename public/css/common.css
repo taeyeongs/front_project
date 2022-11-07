@@ -27,7 +27,6 @@ ul {
   list-style: none;
 }
 
-
 /* 회원가입,검색창,카테고리  */
 .header_wrap {
   width: 100vw;
@@ -101,8 +100,6 @@ ul {
   line-height: 24px;
   cursor: pointer;
 }
-
-
 
 .header_nav {
   height: 100px;
@@ -222,6 +219,10 @@ ul {
 }
 .header_menu3 {
   display: flex;
+  /* width: 600px; */
+  padding-right: 170px;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .header_menu3 > .header_menu_list {
@@ -267,7 +268,6 @@ ul {
 .header_sub_menu div:hover {
   color: purple;
 }
-
 
 /* 상단 고정 메뉴 */
 
@@ -422,9 +422,7 @@ ul {
   cursor: pointer;
 }
 
-
 /****/
-
 
 #footer {
   width: 1050px;
@@ -443,9 +441,6 @@ ul {
   overflow: hidden;
   padding-bottom: 30px;
 }
-
-
-
 
 .happiness_contact_stro {
   display: block;
@@ -484,12 +479,10 @@ ul {
   color: gray;
 }
 
-
 .footer_happiness_contact {
   width: 436px;
   height: 222px;
 }
-
 
 .footer_introduce_content {
   width: 520px;
@@ -535,7 +528,6 @@ ul {
   height: 30px;
   /* margin-right: 10px; */
 }
-
 
 .footer_approve {
   display: flex;
