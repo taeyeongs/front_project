@@ -345,7 +345,6 @@ ul {
   height: 36px;
   background: rgb(221, 221, 221);
   border-radius: 5px;
-  display: flex;
 }
 
 .fix_menu_input {
