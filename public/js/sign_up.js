@@ -1,7 +1,6 @@
 // import { includeHTML } from "./include.js";
 // includeHTML();
 
-
 const userid = document.querySelector("#userid");
 const pwd1 = document.querySelector("#pwd1");
 const pwd2 = document.querySelector("#pwd2");
@@ -201,10 +200,10 @@ itemsSelect.forEach(function (items) {
   });
 });
 
-const termsAppoint = document.querySelector(".items_select  a");
+/* const termsAppoint = document.querySelector(".items_select  a");
 termsAppoint.addEventListener("click", () => {
   alert("이용약관(필수)");
-});
+}); */
 
 //주소
 function getPost() {
