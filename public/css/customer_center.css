@@ -1,10 +1,5 @@
 @charset "utf-8";
 
-@font-face {
-  font-family: "Noto Sans", "malgun gothic", AppleGothic, dotum, sans-serif;
-  src: url(./font/applegothic.ttf);
-  src: url(./font/dotum.ttc);
-}
 * {
   margin: 0;
   padding: 0;
